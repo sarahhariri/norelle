@@ -49,7 +49,7 @@ php artisan migrate --seed
 php artisan storage:link
 ```
 
-The seeders create seven categories and four sample products with S, M and L variants.
+The seeders create seven categories and eight sample products with S, M and L variants.
 
 The variant seeder resets sample stock to five per size when rerun.
 
@@ -106,11 +106,15 @@ Open the local URL displayed in the terminal.
 
 ## Images and Demo Data
 
-Four sample product images are included in `norelle-api/public/products`.
+The seeders create seven categories and eight sample products,
+with S, M and L variants and five units per size.
 
-Category images and additional products can be added through the admin dashboard.
+Demo category images are included in `norelle-api/public/categories`.
+Demo product images are included in `norelle-api/public/products`.
 
-Uploaded images and the local database are excluded from Git. A fresh installation will contain the seeded sample catalog, rather than the complete catalog shown in project videos.
+Additional products and uploaded images can be managed through
+the admin dashboard. The local database and dashboard uploads
+are excluded from Git.
 
 ## Frontend Checks
 

@@ -14,6 +14,10 @@ class ProductVariantSeeder extends Seeder
             'mauve-wrap-dress',
             'dusty-rose-tailored-set',
             'ivory-satin-blouse',
+            'classic-beige-trench-coat',
+            'cocoa-pleated-skirt',
+            'taupe-wide-leg-trousers',
+            'dusty-rose-handbag',
         ];
 
         Product::whereIn('slug', $slugs)->each(function (Product $product) {
