@@ -11,6 +11,22 @@ A fashion boutique demo built with React and a Laravel API, featuring a responsi
 - Place cash-on-delivery orders
 - Manage products, categories, images and stock through the admin dashboard
 - View orders and update their status
+## Screenshots
+
+### Storefront
+![NORELLE storefront](docs/screenshots/home.png)
+
+### Collections
+![Collections](docs/screenshots/collections.png)
+
+### Shop
+![Shop](docs/screenshots/Shop.png)
+
+### Product Details
+![Product details](docs/screenshots/productdetails.png)
+
+### Admin Dashboard
+![Admin dashboard](docs/screenshots/dashboard.png)
 
 ## Tech Stack
 
