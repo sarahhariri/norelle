@@ -14,7 +14,7 @@ use Illuminate\Validation\ValidationException;
 class OrderController extends Controller
 {
   public function store(Request $request)
-{
+ {
     $validated = $request->validate([
         'customer_name' => ['required', 'string', 'max:120'],
         'phone' => ['required', 'string', 'max:30'],
@@ -55,13 +55,17 @@ class OrderController extends Controller
         $subtotalCents = 0;
 
         foreach ($validated['items'] as $item) {
-            $category = $product
-    ? $categories->get($product->category_id)
-    : null;
-            $variant = $variants->get($item['variant_id']);
-            $product = $variant
-                ? $products->get($variant->product_id)
-                : null;
+             $variant = $variants->get($item['variant_id']);
+
+    $product = $variant
+        ? $products->get($variant->product_id)
+        : null;
+
+    $category = $product
+        ? $categories->get($product->category_id)
+        : null;
+           
+            
 
             if (!$variant || !$product || !$product->is_active || !$category || !$category->is_active) {
                 throw ValidationException::withMessages([
